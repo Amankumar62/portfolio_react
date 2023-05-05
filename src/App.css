@@ -52,11 +52,31 @@ body{
     border-radius: 66% 34% 39% 61% / 44% 46% 54% 56% ;
     border:3px solid #93E5AB;
     box-shadow: 4px 4px 8px 0 #93E5AB;
-   transition: border-radius 1000ms ease-out;
+   /* transition: border-radius 1000ms ease-out; */
+   animation-name: wobble;
+   animation-duration: 6000ms;
+   animation-iteration-count: infinite;
 }
-.my-image img:hover{
+@keyframes wobble{
+    0%{
+        border-radius: 66% 34% 39% 61% / 44% 46% 54% 56% ;
+    }
+    30%{
+        border-radius: 58% 42% 23% 77% / 51% 30% 70% 49% ;
+    }
+    50%{
+        border-radius: 56% 44% 40% 60% / 54% 63% 37% 46%  ;
+    }
+    70%{
+        border-radius: 58% 42% 23% 77% / 51% 30% 70% 49% ;
+    }
+    100%{
+        border-radius: 66% 34% 39% 61% / 44% 46% 54% 56% ;
+    }
+}
+/* .my-image img:hover{
     border-radius: 58% 42% 23% 77% / 51% 30% 70% 49% ;
-}
+} */
 
 .detail{
     display: flex;
