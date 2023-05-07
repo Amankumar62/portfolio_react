@@ -5,9 +5,13 @@
     margin: 0%;
     padding: 0%;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     font-family: 'Roboto', sans-serif;
+    margin-top: 50px;
 }
 
 .navigation{
@@ -15,8 +19,7 @@ body{
     padding: 5px;
     position: fixed;
     top: 0px;
-    left: 0px;
-    right: 0px;
+    width: 100%;
     z-index: 100;
     background-color: #fff;
 }
@@ -43,6 +46,7 @@ body{
 }
 .hamburger{
     display: none;
+    position: fixed;
 }
 
 .home{
@@ -85,7 +89,6 @@ body{
 .detail{
     display: flex;
     width: 550px;
-    margin-top: 10rem;
     letter-spacing: 1px;
     padding: 10px;
 }
@@ -136,17 +139,47 @@ body{
     display: none;
 }
 
+@media screen and (max-width:450px){
+    body{
+        margin-top: 250px;
+    }
+    .home{
+        width: 300px;
+        margin:0 auto;
+        font-size: medium;
+    }
+    .description{
+        width: 200px;
+    }
+    .home h1{
+        font-size: larger;
+        width: 200px;
+    }
+    .home p{
+        width: 200px;
+    }
+    .tech{
+        width: 200px;
+    }
+    .nav-links{
+        width: 200px;
+    }
+    .detail{
+        width: 100px;
+    }
+}
+
 @media screen and (max-width:600px){
 
     #nav-toggle:not(:checked) ~ .nav-links{
         display: none;
     }
     .home{
-        margin-top: 18rem;
-        width: 100%;
+        width: 100%
     }
     .detail{
         flex-direction: column;
+        margin-top: 10rem;
         align-items: center;
         text-align: center;
         padding: 0;
@@ -175,7 +208,6 @@ body{
         cursor: pointer;
     }
     .navigation .nav-links{
-        /* display: none; */
         position: fixed;
         flex-direction: column;
         width: 100%;
@@ -190,3 +222,4 @@ body{
     }
     
 }
+
