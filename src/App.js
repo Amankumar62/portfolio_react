@@ -1,23 +1,42 @@
 import "./App.css";
+import { useState } from "react";
 import { Routes, Route, NavLink } from "react-router-dom";
 import { Home } from "./Home";
 import { Projects } from "./Projects";
 import { Blog } from "./Blog";
 import { Contact } from "./Contact";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
 function App() {
+  const [darkTheme, setDarkTheme] = useState(false);
+
   const activeStyle = ({ isActive }) => {
     return {
       backgroundColor: isActive && "#65B891",
       borderRadius: "10px",
       textAlign: "center",
-      color: isActive && "#fff",
-      transition: "all 150ms ease-in",
+      color: darkTheme && "#fff",
+      transition: "backgroundColor 150ms ease-in",
     };
   };
+
+  const toggleTheme = () => {
+    setDarkTheme(() => !darkTheme);
+  };
+  if (darkTheme) {
+    document.body.classList.add("dark-theme");
+  } else {
+    document.body.classList.remove("dark-theme");
+  }
   return (
     <div className="App">
-      <nav className="navigation">
+      <nav
+        className="navigation"
+        style={{
+          backgroundColor: darkTheme && "#111",
+          color: darkTheme && "#fff",
+        }}
+      >
         <h2>
           Aman.<span style={{ color: "#65B891" }}>dev</span>
         </h2>
@@ -27,7 +46,15 @@ function App() {
             <GiHamburgerMenu />
           </label>
         </div>
-        <div className="nav-links">
+
+        <label id="toggle-theme" onClick={() => toggleTheme()}>
+          {darkTheme ? <BsFillSunFill /> : <BsFillMoonFill />}
+        </label>
+
+        <div
+          className="nav-links"
+          style={{ backgroundColor: darkTheme && "#111" }}
+        >
           <NavLink style={activeStyle} to="/">
             Home
           </NavLink>
