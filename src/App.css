@@ -8,14 +8,17 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    /* font-family: 'Titillium Web', sans-serif; */
-    /* font-family: 'Koulen', cursive; */
 }
 
 .navigation{
     display: flex;
-    margin-top: 10px;
-    margin-left: 10px;
+    padding: 5px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 100;
+    background-color: #fff;
 }
 
 .navigation div{
@@ -26,6 +29,9 @@ body{
 .navigation h2{
     letter-spacing: 1px;
 }
+.navigation a:hover{
+    color: #93E5AB;
+}
 
 .navigation div a{
     padding: 10px;
@@ -34,6 +40,9 @@ body{
     font-weight: 600;
     color: #000;
     font-size: 16px;
+}
+.hamburger{
+    display: none;
 }
 
 .home{
@@ -52,7 +61,6 @@ body{
     border-radius: 66% 34% 39% 61% / 44% 46% 54% 56% ;
     border:3px solid #93E5AB;
     box-shadow: 4px 4px 8px 0 #93E5AB;
-   /* transition: border-radius 1000ms ease-out; */
    animation-name: wobble;
    animation-duration: 6000ms;
    animation-iteration-count: infinite;
@@ -74,14 +82,10 @@ body{
         border-radius: 66% 34% 39% 61% / 44% 46% 54% 56% ;
     }
 }
-/* .my-image img:hover{
-    border-radius: 58% 42% 23% 77% / 51% 30% 70% 49% ;
-} */
-
 .detail{
     display: flex;
     width: 550px;
-    margin-right: 20px;
+    margin-top: 10rem;
     letter-spacing: 1px;
     padding: 10px;
 }
@@ -127,4 +131,62 @@ body{
     padding-right: 10px;
     padding-top: 5px;
     font-size: 18px;
+}
+.nav-toggle{
+    display: none;
+}
+
+@media screen and (max-width:600px){
+
+    #nav-toggle:not(:checked) ~ .nav-links{
+        display: none;
+    }
+    .home{
+        margin-top: 18rem;
+        width: 100%;
+    }
+    .detail{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0;
+    }
+    .description{
+        align-items: center;
+    }
+    .my-image{
+        align-self: center;
+    }
+    .navigation{
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,0.05);
+    }
+    .tech-stack{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        
+    }
+    .hamburger{
+        position: fixed;
+        right: 0px;
+        display: inline-block;
+        font-size: 2rem;
+        padding-right:0.5rem ;
+        cursor: pointer;
+    }
+    .navigation .nav-links{
+        /* display: none; */
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        padding: 10px;
+        top: 30px;
+        background-color: #fff;
+        z-index: 110;
+    }
+    .nav-links a{
+        display: block;
+    }
+    
 }

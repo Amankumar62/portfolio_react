@@ -4,6 +4,7 @@ import { Home } from "./Home";
 import { Projects } from "./Projects";
 import { Blog } from "./Blog";
 import { Contact } from "./Contact";
+import { GiHamburgerMenu } from "react-icons/gi";
 function App() {
   const activeStyle = ({ isActive }) => {
     return {
@@ -20,7 +21,13 @@ function App() {
         <h2>
           Aman.<span style={{ color: "#65B891" }}>dev</span>
         </h2>
-        <div>
+        <input type="checkbox" id="nav-toggle" className="nav-toggle"></input>
+        <div className="hamburger">
+          <label for="nav-toggle" className="hamburger">
+            <GiHamburgerMenu />
+          </label>
+        </div>
+        <div className="nav-links">
           <NavLink style={activeStyle} to="/">
             Home
           </NavLink>
