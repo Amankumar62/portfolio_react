@@ -22,7 +22,7 @@ body{
     padding: 5px;
     position: fixed;
     top: 0px;
-    width: 100%;
+    width: 95%;
     height: 2.5rem;
     z-index: 100;
     background-color: #fff;
@@ -69,6 +69,7 @@ body{
     flex-direction: column;
     width: 100%;
     height: 70vh;
+    margin-top: 5rem;
     justify-content: center;
     align-items: center;
 }
@@ -109,7 +110,7 @@ body{
 }
 .detail p{
     margin-top: 10px;
-    color: #333;
+    color: inherit;
     line-height: 30px;
 }
 .socials{
@@ -119,7 +120,7 @@ body{
 }
 .socials a{
     margin-right: 20px;
-    color: #000;
+    color: inherit;
 }
 .description{
     display: flex;
@@ -156,11 +157,10 @@ body{
 
 @media screen and (max-width:450px){
     body{
-        margin-top: 250px;
+        margin-top: 200px;
     }
     .home{
         width: 300px;
-        margin:0 auto;
         font-size: medium;
     }
     .description{
@@ -170,7 +170,7 @@ body{
         width: 100%;
     }
     .home h1{
-        font-size: larger;
+        font-size: xx-large;
         width: 200px;
     }
     .home p{
@@ -193,7 +193,8 @@ body{
         display: none;
     }
     .home{
-        width: 100%
+        width: 100%;
+        margin-top:18rem;
     }
     #toggle-theme{
         right: 6rem;
@@ -223,10 +224,10 @@ body{
     }
     .hamburger{
         position: fixed;
-        right: 0px;
+        right: 5px;
         display: inline-block;
         font-size: 2rem;
-        padding-right:0.5rem ;
+        /* padding-right:0.5rem ; */
         cursor: pointer;
     }
     .navigation .nav-links{

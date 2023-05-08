@@ -7,8 +7,8 @@ export const Home = () =>{
             <h1>Front-End React Developer 👋🏽</h1>
             <p>Hi i'm <span style={{color:"#4E878C"}}>Aman Kumar</span>. A passionate Front-end React Developer.</p>
             <section className="socials">
-            <a href="https://www.linkedin.com/"><AiFillLinkedin/></a>
-            <a href="https://www.github.com/"><AiFillGithub/></a>
+            <a  href="https://www.linkedin.com/in/amankr1209/"><AiFillLinkedin/></a>
+            <a href="https://github.com/Amankumar62"><AiFillGithub/></a>
             </section>
         </div> 
         <div className="my-image"><img src={require("./images/IMG_20230104_121908.jpg")} alt="my image"/></div>
