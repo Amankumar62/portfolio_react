@@ -7,6 +7,7 @@ import { Blog } from "./Blog";
 import { Contact } from "./Contact";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import { ErrorPage } from "./ErrorPage";
 function App() {
   const [darkTheme, setDarkTheme] = useState(false);
 
@@ -74,6 +75,7 @@ function App() {
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Blog" element={<Blog />} />
         <Route path="/Contact" element={<Contact />} />
+        <Route path="/*" element={<ErrorPage />} />
       </Routes>
     </div>
   );
